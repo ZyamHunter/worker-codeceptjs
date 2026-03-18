@@ -25,6 +25,12 @@ npm run test:serial
 npm run test:workers
 ```
 
+Para distribuicao dinamica (cada worker pega novo teste quando ficar livre), use:
+
+```bash
+npx codeceptjs run-workers 3 --by pool --verbose
+```
+
 ## Rodar com 3 workers diferentes (perfis)
 
 ```bash
@@ -35,6 +41,9 @@ Esse comando usa a secao `multiple.profiles` do `codecept.conf.js` e sobe 3 work
 - profile 1: `en-US`, `1280x720`, `userAgent=worker-codeceptjs/profile-1`
 - profile 2: `pt-BR`, `1366x768`, `userAgent=worker-codeceptjs/profile-2`
 - profile 3: `es-ES`, `1920x1080`, `userAgent=worker-codeceptjs/profile-3`
+
+Observacao: quando usar `multiple/profiles`, a suite roda uma vez por perfil.
+Exemplo: 30 testes x 3 perfis = 90 testes no total.
 
 ## CI (GitHub Actions)
 
