@@ -1,0 +1,24 @@
+{
+  "name": "worker-codeceptjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:serial",
+    "test:serial": "npx codeceptjs run --steps",
+    "test:workers": "npx codeceptjs run-workers 6 --verbose",
+    "test:workers:3profiles": "npx codeceptjs run-workers 1 profiles --verbose",
+    "test:workers:4": "npx codeceptjs run-workers 4 --verbose",
+    "test:ci:workers": "npm run test:workers:3profiles",
+    "test:ci:serial": "npx codeceptjs run --steps",
+    "test:headed": "npx codeceptjs run --steps --headed",
+    "pw:install": "npx playwright install chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Projeto CodeceptJS + Playwright com workers para execucao paralela",
+  "devDependencies": {
+    "codeceptjs": "^3.7.7",
+    "playwright": "^1.58.2"
+  }
+}
