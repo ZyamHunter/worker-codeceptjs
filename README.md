@@ -1,5 +1,7 @@
 # Worker CodeceptJS + Playwright
 
+[![E2E Pipeline](https://github.com/ZyamHunter/worker-codeceptjs/actions/workflows/e2e-pipeline.yml/badge.svg)](https://github.com/ZyamHunter/worker-codeceptjs/actions/workflows/e2e-pipeline.yml)
+
 Projeto com 30 testes para o site:
 
 https://demoqa.com/
